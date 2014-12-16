@@ -6,7 +6,7 @@ Kuali.co specific haskell resources, tutorial, etc.
 Installation
 -----------
 
-Install GHC 7.8 and Cabal 1.20 on a mac: http://ghcformacosx.github.io/. Run the app for instructions.
+Install GHC 7.8 and Cabal 1.20 on a mac: http://ghcformacosx.github.io/. Run the app and follow the instructions.
 
 Install dev tools
 -------------------------
@@ -115,14 +115,16 @@ FAQ
 
 ### I can't get cabal to install a new package. It says that packages conflict. 
 
-If the errors message says you can try by forcing reinstalls, go ahead and try that first
+If the errors message says you can try to forcing reinstalls, go ahead and see if it works
 
-    cabal install --force-reinstalls <package>
+    cabal install --force-reinstalls
 
-If you are installing cabal packages globally:
+Otherwise, if you are installing cabal packages globally:
 
-    rm -r ./cabal
-    # add your package to the end of this
+    # remove all installed cabal packages
+    rm -r ~/.ghc
+
+    # reinstall global packages (add the one you want to the end of this list)
     cabal install alex happy ghc-mod hdevtools
 
 If you are working in a project, first [make sure you are using sandboxes](#using-cabal)
@@ -131,6 +133,8 @@ If you are working in a project, first [make sure you are using sandboxes](#usin
     cabal install --only-dependencies
 
 Optionally, if that doesn't work, remove `cabal.config` before running the above, then run `cabal freeze` when you are done to clear out the specific dependencies.
+
+
     
 
 
