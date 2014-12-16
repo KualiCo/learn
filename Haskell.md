@@ -11,8 +11,9 @@ Install GHC 7.8 and Cabal 1.20 on a mac: http://ghcformacosx.github.io/. Run the
 Install dev tools
 -------------------------
 
-Install all of your top-level dependencies at once, to avoid conflicts
+Install all of your global dependencies at once, to avoid conflicts. Only install dev tools globally.
 
+    cabal update
     cabal install alex happy ghc-mod hdevtools
 
 Books and Curricula
@@ -27,7 +28,7 @@ Books and Curricula
 Problems
 --------
 
-[Hackerrank Functional Problems](https://www.hackerrank.com/domains/fp/intro) - Good easy problems to get your feet wet. These are only good for chapters 1-10 in LYAH. They don't do anything to help you understand how to build a webserver. 
+[HackerRank Functional Problems](https://www.hackerrank.com/domains/fp/intro) - Good easy problems to get your feet wet. These are only good for chapters 1-10 in LYAH. They don't do anything to help you understand how to build a webserver. 
 
 Tutorials
 ---------
@@ -113,6 +114,10 @@ FAQ
 ---
 
 ### I can't get cabal to install a new package. It says that packages conflict. 
+
+If the errors message says you can try by forcing reinstalls, go ahead and try that first
+
+    cabal install --force-reinstalls <package>
 
 If you are installing cabal packages globally:
 
