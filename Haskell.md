@@ -96,7 +96,7 @@ Using Cabal
     # At some point, when you have your main dependencies specified
     cabal freeze
 
-You should check in `my-project.cabal` and `cabal.config`, but ignore `cabal.sandbox.config. Here's an wample `.gitignore`
+You should check in `my-project.cabal` and `cabal.config`, but ignore `cabal.sandbox.config`. Here's a sample `.gitignore`
 
     dist
     cabal-dev
@@ -114,7 +114,7 @@ FAQ
 
 ### I can't get cabal to install a new package. It says that packages conflict. 
 
-If you are installing cabal packages globally: remove `~/.cabal` and reinstall all the global packages you need at once. 
+If you are installing cabal packages globally:
 
     rm -r ./cabal
     # add your package to the end of this
