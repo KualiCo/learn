@@ -6,7 +6,14 @@ Kuali.co specific haskell resources, tutorial, etc.
 Installation
 -----------
 
-Install GHC 7.8 and Cabal 1.20 on a mac: http://ghcformacosx.github.io/
+Install GHC 7.8 and Cabal 1.20 on a mac: http://ghcformacosx.github.io/. Run the app for instructions.
+
+Install dev tools
+-------------------------
+
+Install all of your top-level dependencies at once, to avoid conflicts
+
+    cabal install alex happy ghc-mod hdevtools
 
 Books and Curricula
 -------------------
@@ -33,9 +40,7 @@ Configuring Vim
 
 There are multiple ways to do this, but this is what @seanhess currently recommends.
 
-System dependencies
-
-- [`cabal install hdevtools`](https://github.com/bitc/hdevtools)
+Note: Make sure you installed hdevtools <a href="#install-dev-tools">as described above</a>
 
 Vim Plugins
 
@@ -74,6 +79,46 @@ Configuring Sublime Text
 ------------------------
 
 [Sublime Haskell](https://github.com/SublimeHaskell/SublimeHaskell)
+
+
+Using Cabal
+-----------
+
+    # always work in a sandbox
+    cabal sandbox init
+
+    # Create a `.cabal` file for your project
+    cabal init
+
+    # Add dependencies to the build-depends field and then install them
+    cabal install --only-dependencies
+
+    # At some point, when you have your main dependencies specified
+    cabal freeze
+
+You should check in `my-project.cabal` and `cabal.config`, but ignore `cabal.sandbox.config. Here's an wample `.gitignore`
+
+    dist
+    cabal-dev
+    *.o
+    *.hi
+    *.chi
+    *.chs.h
+    .virtualenv
+    .hsenv
+    .cabal-sandbox/
+    cabal.sandbox.config
+
+FAQ
+---
+
+### I can't get cabal to install a new package. It says that packages conflict. 
+
+If you are installing cabal packages globally, remove `~/.cabal` and reinstall all the global packages you need at once. 
+
+If you are working in a project, make sure you are using sandboxes, remove `.cabal-sandbox` instead, then run `cabal install`. Consider deleting `cabal.config`, then once it works run `cabal freeze` again to get the specific versions. If you do sandboxes and cabal freeze from the beginning this should be rare.
+
+
 
 
 
