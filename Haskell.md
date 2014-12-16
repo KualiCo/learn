@@ -114,10 +114,19 @@ FAQ
 
 ### I can't get cabal to install a new package. It says that packages conflict. 
 
-If you are installing cabal packages globally, remove `~/.cabal` and reinstall all the global packages you need at once. 
+If you are installing cabal packages globally: remove `~/.cabal` and reinstall all the global packages you need at once. 
 
-If you are working in a project, make sure you are using sandboxes, remove `.cabal-sandbox` instead, then run `cabal install`. Consider deleting `cabal.config`, then once it works run `cabal freeze` again to get the specific versions. If you do sandboxes and cabal freeze from the beginning this should be rare.
+    rm -r ./cabal
+    # add your package to the end of this
+    cabal install alex happy ghc-mod hdevtools
 
+If you are working in a project, first [make sure you are using sandboxes](#using-cabal)
+
+    rm -r .cabal-sandbox
+    cabal install --only-dependencies
+
+Optionally, if that doesn't work, remove `cabal.config` before running the above, then run `cabal freeze` when you are done to clear out the specific dependencies.
+    
 
 
 
