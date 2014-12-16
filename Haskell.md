@@ -62,6 +62,18 @@ let g:NERDCustomDelimiters = {
 
 ```
 
+Now you should be able to do the following:
+
+- single-line comments
+- on save it will update errors
+- see errors in the error window
+- see erorrs highlighted inline
+- `:HdevtoolsInfo` will show you the type of a function and where it is defined
+
+Configuring Sublime Text
+------------------------
+
+[Sublime Haskell](https://github.com/SublimeHaskell/SublimeHaskell)
 
 
 
