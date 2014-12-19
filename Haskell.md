@@ -110,6 +110,57 @@ You should check in `my-project.cabal` and `cabal.config`, but ignore `cabal.san
     .cabal-sandbox/
     cabal.sandbox.config
 
+Why Haskell
+-----------
+
+MAINTENANCE
+
+We can maintain a project 10x larger before hitting the Great Slowdown. Our code will also be more reliable.
+
+- Functional - Factoring code functionally - divides code into smaller pieces. Much more composable. Much less monolithic. 
+- Functional - Focus on what, not how
+- Type system - We can edit a foreign codebase with much more confidence. Haskell solves the bus problem. 
+- Type system - Enforces the original authors intent in a way that does not need be maintained separately
+- Type system - Reduces the complexity of inter-service communication (using servant)
+- QuickCheck - much better testing made possible through types
+
+COMMUNITY
+
+The Haskell community is awesome, and will have a positive impact on our culture and our ability to ship. Programming as a whole headed that direction.
+
+- Community builds off each others' work better. 
+- Community is helpful, inventive, positive, and growing.
+- Programming is headed towards stricter types (see Rust, Go)
+- Types themselves are a area of huge advancement and research (See Idris)
+
+OUR TEAM
+
+- plenty of people who are enthusiastic about Haskell
+- people who know it are awesome programmers
+
+OTHER
+
+- We need higher level abstractions to create larger programs. You give up understanding how things work sometimes in exchange for the ability to reason at the next level. (Assembly vs C, C vs Javascript, Javascript vs Haskell)
+- runtime performance
+- emphasizes safety
+
+MORE READING
+
+- [Real World Haskell: Why functional Programming? Why Haskell?](http://book.realworldhaskell.org/read/why-functional-programming-why-haskell.html)
+- [Why the world needs Haskell](http://www.devalot.com/articles/2013/07/why-haskell.html)
+
+COMPANIES USING HASKELL
+
+- [IMVU: What it's like to use Haskell](http://engineering.imvu.com/2014/03/24/what-its-like-to-use-haskell/) 
+- [Haskell at JanRain](http://janrain.com/blog/haskell-janrain/)
+- [Quora: What startups use Haskell for production work?](http://www.quora.com/What-startups-use-Haskell-for-production-work)
+- [MailRank: Running a startup on Haskell](http://bos.github.io/strange-loop-2011/talk/talk.html)
+- [FP Complete Case Studies](https://www.fpcomplete.com/page/case-studies) Bump, Janrain, Silk, Netrium, SAFE, and Scrive. 
+
+
+
+
+
 FAQ
 ---
 
@@ -133,6 +184,7 @@ If you are working in a project, first [make sure you are using sandboxes](#usin
     cabal install --only-dependencies
 
 Optionally, if that doesn't work, remove `cabal.config` before running the above, then run `cabal freeze` when you are done to clear out the specific dependencies.
+
 
 
     
