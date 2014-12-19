@@ -137,17 +137,19 @@ OUR TEAM
 
 - plenty of people who are enthusiastic about Haskell
 - people who know it are awesome programmers
+- good design principles trickling down through the rest of our codebase
 
 OTHER
 
 - We need higher level abstractions to create larger programs. (Assembly vs C, C vs Javascript, Javascript vs Haskell)
 - runtime performance
-- emphasizes safety
+- "emphasizes safety"
 
 MORE READING
 
 - [Real World Haskell: Why functional Programming? Why Haskell?](http://book.realworldhaskell.org/read/why-functional-programming-why-haskell.html)
 - [Why the world needs Haskell](http://www.devalot.com/articles/2013/07/why-haskell.html)
+- [Paul Graham: Beating the Averages](http://paulgraham.com/avg.html) - on using lisp, but many of the same points apply.
 
 COMPANIES USING HASKELL
 
@@ -156,6 +158,7 @@ COMPANIES USING HASKELL
 - [Quora: What startups use Haskell for production work?](http://www.quora.com/What-startups-use-Haskell-for-production-work)
 - [MailRank: Running a startup on Haskell](http://bos.github.io/strange-loop-2011/talk/talk.html)
 - [FP Complete Case Studies](https://www.fpcomplete.com/page/case-studies) Bump, Janrain, Silk, Netrium, SAFE, and Scrive. 
+- [Corentin Roux, on choosing Haskell](http://qr.ae/q3Qce)
 
 
 
