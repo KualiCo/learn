@@ -140,7 +140,7 @@ OUR TEAM
 
 OTHER
 
-- We need higher level abstractions to create larger programs. You give up understanding how things work sometimes in exchange for the ability to reason at the next level. (Assembly vs C, C vs Javascript, Javascript vs Haskell)
+- We need higher level abstractions to create larger programs. (Assembly vs C, C vs Javascript, Javascript vs Haskell)
 - runtime performance
 - emphasizes safety
 
